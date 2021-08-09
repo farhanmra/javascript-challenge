@@ -7,13 +7,41 @@ function nilaiPeserta (nilai) {
         D = 20 - 40
         E = >20
     */
+        if(nilai>=80 && nilai<=100){
+            return 'A'
+        }
+        else if(nilai>=60 && nilai<80){
+            return 'B'
+        }
+        else if(nilai>=40 && nilai<60){
+            return 'C'
+        }
+        else if(nilai>=20 && nilai<40){
+            return 'D'
+        }
+        else if(nilai<20){
+            return 'E'
+        }
+        else{
+            return 'Tidak ada nilai'
+        }
 }
 
+// var dataSiswa = [
+//     ["Jojo", 55.5, nilaiPeserta(nilai)],
+//     ["Andika", 70.1, nilaiPeserta(nilai)],
+//     ["Alif", 19, nilaiPeserta(nilai)],
+//     ["Vista", 102, nilaiPeserta(nilai)]
+// ];
 var dataSiswa = [
-    ["Jojo", 55.5, nilaiPeserta(nilai)],
-    ["Andika", 70.1, nilaiPeserta(nilai)],
-    ["Alif", 19, nilaiPeserta(nilai)],
-    ["Vista", 102, nilaiPeserta(nilai)]
+    ["Jojo", 55.5],
+    ["Andika", 70],
+    ["Alif", 19],
+    ["Vista", 102]
 ];
-
-//Silahkan gunakan proses perulangan untuk mengambil semua data array dataSiswa dan tampilkan outputnya.
+// //Silahkan gunakan proses perulangan untuk mengambil semua data array dataSiswa dan tampilkan outputnya.
+for(i=0;i<dataSiswa.length;i++){
+    for(a=0;a<3;a++)
+    document.write(dataSiswa[i][a]+ ' ')
+    document.write('<br>')
+}
