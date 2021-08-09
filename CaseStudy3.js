@@ -27,21 +27,22 @@ function nilaiPeserta (nilai) {
         }
 }
 
+// var dataSiswa = [
+//     ["Jojo", 55.5, nilaiPeserta(nilai)],
+//     ["Andika", 70.1, nilaiPeserta(nilai)],
+//     ["Alif", 19, nilaiPeserta(nilai)],
+//     ["Vista", 102, nilaiPeserta(nilai)]
+// ];
 var dataSiswa = [
     ["Jojo", 55.5, nilaiPeserta(55.5)],
     ["Andika", 70.1, nilaiPeserta(70.1)],
     ["Alif", 19, nilaiPeserta(19)],
     ["Vista", 102, nilaiPeserta(102)]
 ];
-// var dataSiswa = [
-//     ["Jojo", 55.5],
-//     ["Andika", 70],
-//     ["Alif", 19],
-//     ["Vista", 102]
-// ];
 // //Silahkan gunakan proses perulangan untuk mengambil semua data array dataSiswa dan tampilkan outputnya.
 for(i=0;i<dataSiswa.length;i++){
     for(a=0;a<3;a++)
+    
     document.write(dataSiswa[i][a]+ ' ')
     document.write('<br>')
 }
