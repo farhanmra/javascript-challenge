@@ -110,49 +110,159 @@ yang ketika halaman diload akan menjalankan urutan program sebagai berikut :
 //==================================================================================================================
 
 //=================================================VERSI DOJOBOX================================================
+//Menu
+
+menu = prompt ('Silahkan pilih menu yang tersedia ','1.Luas, 2.Keliling')
+if (menu==1){
+    alert ('Anda Telah Memilih Luas bangun datar')
+    menuLuas=prompt('Masukan bangun datar yang akan dihitung','1. persegi, 2. persegi panjang, 3. segitiga, 4. Lingkaran')
+    if (menuLuas==1){
+        //luas Persegi
+        luasPersegi()
+    }
+    else if(menuLuas==2){
+        //luas persegi panjang
+        luasPersegiPanjang()
+    }
+    else if(menuLuas==3){
+        //segitiga
+        luasSegitiga()
+    }
+    else if(menuLuas==4){
+        //lingkaran
+        luasLingkaran()
+    }
+    else{
+        document.write('Pilihan anda tidak ada'+'<br>')
+    }
+
+}else if(menu==2){
+    alert ('Anda Telah Memilih Keliling bangun datar')
+    menuKeliling=prompt('Masukan bangun datar yang akan dihitung','1. persegi, 2. persegi panjang, 3. segitiga, 4. Lingkaran')
+    if (menuKeliling==1){
+        //keliling Persegi
+        kelilingPersegi()
+    }
+    else if(menuKeliling==2){
+        //keliling persegi panjang
+        kelilingPersegiPanjang()
+    }
+    else if(menuKeliling==3){
+        //segitiga
+        kelilingSegitiga()
+    }
+    else if(menuKeliling==4){
+        //lingkaran
+        kelilingLingkaran()
+    }
+    else{
+        document.write('Pilihan anda tidak ada'+'<br>')
+    }
+}else{
+    document.write('Menu yang anda pilih tidak ada'+'<br>')
+}
+//Operation
+
+//Input Output
+//luas
+//persegi
+function luasPersegi(){
+    parameter=parseInt(prompt('masukan sisi persegi: '))
+    luas =hitungLuasSegiEmpat(parameter)
+    document.write('Luas persegi adalah :'+luas)
+}
+//persegi panjang
+function luasPersegiPanjang(){
+    parameter1=parseInt(prompt('masukan panjang persegi panjang: '))
+    parameter2=parseInt(prompt('masukan lebar persegi panjang: '))
+    luas =hitungLuasPersegiPanjang(parameter1,parameter2)
+    document.write('Luas persegi panjang adalah :'+luas)
+}
+//segitiga
+function luasSegitiga(){
+    parameter1=parseInt(prompt('masukan alas segitiga: '))
+    parameter2=parseInt(prompt('masukan tingi segitiga: '))
+    luas =hitungLuasSegitiga(parameter1,parameter2)
+    document.write('Luas segitiga adalah :'+luas)
+}
+//lingkaran
+function luasLingkaran(){
+    parameter=parseInt(prompt('masukan jari jari lingkaran: '))
+    luas =hitungLuasLingkaran(parameter)
+    document.write('Luas lingkaran adalah :'+luas)
+}
+//Keliling
+//persegi
+function kelilingPersegi(){
+    parameter=parseInt(prompt('masukan sisi persegi: '))
+    keliling =hitungKelilingSegiEmpat(parameter)
+    document.write('Keliling persegi adalah :'+keliling)
+}
+//persegi panjang
+function kelilingPersegiPanjang(){
+    parameter1=parseInt(prompt('masukan panjang persegi panjang: '))
+    parameter2=parseInt(prompt('masukan lebar persegi panjang: '))
+    keliling =hitungKelilingPersegiPanjang(parameter1,parameter2)
+    document.write('Keliling persegi panjang adalah :'+keliling)
+}
+//segitiga
+function kelilingSegitiga(){
+    parameter1=parseInt(prompt('masukan alas segitiga: '))
+    parameter2=parseInt(prompt('masukan tingi segitiga: '))
+    parameter3=parseInt(prompt('masukan sisi miring segitiga: '))
+    keliling =hitungKelilingSegiTiga(parameter1,parameter2,parameter3)
+    document.write('keliling segitiga adalah :'+keliling)
+}
+//lingkaran
+function kelilingLingkaran(){
+    parameter=parseInt(prompt('masukan jari jari segitiga: '))
+    keliling =hitungKelilingLingkaran(parameter)
+    document.write('Keliling lingkaran adalah :'+keliling)
+}
+
+
+
 //Fungsi menghitung luas menggunakan function declaration
 //boleh tidak memiliki nilai balik
 
 //tidak menggunakan nilai balik
 //segi empat (sisi*sisi)
-function luasSegiEmpat(sisi){
+function hitungLuasSegiEmpat(sisi){
     luas =sisi*sisi
-    document.write('Luas segi empat ='+ luas)
+    return luas
 }
 
 //segi panjang (panjang * lebar)
-function luasPersegiPanjang(panjang,lebar){
+function hitungLuasPersegiPanjang(panjang,lebar){
     luas=panjang*lebar
-    document.write('Luas Persegi panjang ='+luas)
-
+    return luas
 }
 
 //menggunakan nilai balik
 //segi tiga (0.5 *alas *tinggi)
-function luasSegitiga(alas,tinggi){
+function hitungLuasSegitiga(alas,tinggi){
     luas=0.5*alas*tinggi
     return luas;
 }
 //lingkaran (3.14*jari jari ^2)
-function luasLingkaran(jari){
+function hitungLuasLingkaran(jari){
     return  3.14 *jari**2
 }
 
 //fungsi menghitung keliling mengunakan function expression
 //segi empat (sisi +sisi +sisi +sisi)
-kelilingSegiEmpat=function(sisi){
+hitungKelilingSegiEmpat=function(sisi){
     return sisi *4
 }
 //segi panjang (2*(panjang +lebar))
-kelilingPersegiPanjang=function(panjang,lebar){
+hitungKelilingPersegiPanjang=function(panjang,lebar){
     return 2*(panjang+lebar)
 }
 //segi tiga (alas+tingi +sisi miring)
-kelilingSegiTiga=function(alas,tinggi,sisiMiring){
+hitungKelilingSegiTiga=function(alas,tinggi,sisiMiring){
     return alas+tinggi+sisiMiring
 }
 //lingkaran (2*3.14*jari jari)
-kelilingLingkaran=function(jari){
+hitungKelilingLingkaran=function(jari){
     return 2*3.14*jari
 }
-
