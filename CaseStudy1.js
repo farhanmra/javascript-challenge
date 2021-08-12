@@ -26,27 +26,6 @@
     // h=x/y
     // document.write(x+'/'+y+'='+(h.toFixed(2)))
 
-//menggunakan function
-// let jumlah = function(x,y){
-//     return x+y;
-// }
-
-// let kurang = function(x,y){
-//     return x-y;
-// }
-
-// let kali = function(x,y){
-//     return x*y;
-// }
-
-// let bagi = function(x,y){
-//     return x/y;
-// }
-
-// document.write(`Hasil dari penjumlahan dari ${x} + ${y} = ${jumlah(x,y)} <br>`);
-// document.write(`Hasil dari pengurangan dari ${x} - ${y} = ${kurang(x,y)} <br>`);
-// document.write(`Hasil dari perkalian dari ${x} x ${y} = ${kali(x,y)} <br>`);
-// document.write(`Hasil dari pembagian ${x} / ${y} = ${bagi(x,y)} <br>`);
 
 //menggunakan funtion cara ke 2
 var bil1=parseInt(prompt('Masukan nilai bilangan pertama :'))

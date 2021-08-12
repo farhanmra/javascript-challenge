@@ -10,9 +10,15 @@ Berat badan ideal wanita untuk tinggi ... sentimeter adalah ... kilogram
 */
 
 function beratBadanPria() {
-
+    bBL=(tinggi-100)-((tinggi-100)*10/100)
+    return bBL
 }
 
 function beratBadanWanita() {
-    
+    bBP=(tinggi-100)-((tinggi-100)*15/100)
+    return bBP
 }
+
+tinggi=parseInt(prompt('Masukan tinggi anda :'))
+document.write('Berat Badan ideal pria untuk tinggi '+tinggi+' sentimeter adalah '+beratBadanPria()+'<br>')
+document.write('Berat Badan ideal wanita untuk tinggi '+tinggi+' sentimeter adalah '+beratBadanWanita()+'<br>')
