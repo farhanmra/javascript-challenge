@@ -110,59 +110,6 @@ yang ketika halaman diload akan menjalankan urutan program sebagai berikut :
 //==================================================================================================================
 
 //=================================================VERSI DOJOBOX================================================
-//Menu
-
-menu = prompt ('Silahkan pilih menu yang tersedia ','1.Luas, 2.Keliling')
-if (menu==1){
-    alert ('Anda Telah Memilih Luas bangun datar')
-    menuLuas=prompt('Masukan bangun datar yang akan dihitung','1. persegi, 2. persegi panjang, 3. segitiga, 4. Lingkaran')
-    if (menuLuas==1){
-        //luas Persegi
-        luasPersegi()
-    }
-    else if(menuLuas==2){
-        //luas persegi panjang
-        luasPersegiPanjang()
-    }
-    else if(menuLuas==3){
-        //segitiga
-        luasSegitiga()
-    }
-    else if(menuLuas==4){
-        //lingkaran
-        luasLingkaran()
-    }
-    else{
-        document.write('Pilihan anda tidak ada'+'<br>')
-    }
-
-}else if(menu==2){
-    alert ('Anda Telah Memilih Keliling bangun datar')
-    menuKeliling=prompt('Masukan bangun datar yang akan dihitung','1. persegi, 2. persegi panjang, 3. segitiga, 4. Lingkaran')
-    if (menuKeliling==1){
-        //keliling Persegi
-        kelilingPersegi()
-    }
-    else if(menuKeliling==2){
-        //keliling persegi panjang
-        kelilingPersegiPanjang()
-    }
-    else if(menuKeliling==3){
-        //segitiga
-        kelilingSegitiga()
-    }
-    else if(menuKeliling==4){
-        //lingkaran
-        kelilingLingkaran()
-    }
-    else{
-        document.write('Pilihan anda tidak ada'+'<br>')
-    }
-}else{
-    document.write('Menu yang anda pilih tidak ada'+'<br>')
-}
-//Operation
-
 //Input Output
 //luas
 //persegi
@@ -220,8 +167,7 @@ function kelilingLingkaran(){
     document.write('Keliling lingkaran adalah :'+keliling)
 }
 
-
-
+//operation
 //Fungsi menghitung luas menggunakan function declaration
 //boleh tidak memiliki nilai balik
 
@@ -254,6 +200,9 @@ function hitungLuasLingkaran(jari){
 hitungKelilingSegiEmpat=function(sisi){
     return sisi *4
 }
+// function hitungKelilingSegiEmpat(sisi){
+//     return sisi * 4
+// }
 //segi panjang (2*(panjang +lebar))
 hitungKelilingPersegiPanjang=function(panjang,lebar){
     return 2*(panjang+lebar)
@@ -265,4 +214,55 @@ hitungKelilingSegiTiga=function(alas,tinggi,sisiMiring){
 //lingkaran (2*3.14*jari jari)
 hitungKelilingLingkaran=function(jari){
     return 2*3.14*jari
+}
+
+//menu
+menu = prompt ('Silahkan pilih menu yang tersedia ','1.Luas, 2.Keliling')
+if (menu==1){
+    alert ('Anda Telah Memilih Luas bangun datar')
+    menuLuas=prompt('Masukan bangun datar yang akan dihitung','1. persegi, 2. persegi panjang, 3. segitiga, 4. Lingkaran')
+    if (menuLuas==1){
+        //luas Persegi
+        luasPersegi()
+    }
+    else if(menuLuas==2){
+        //luas persegi panjang
+        luasPersegiPanjang()
+    }
+    else if(menuLuas==3){
+        //segitiga
+        luasSegitiga()
+    }
+    else if(menuLuas==4){
+        //lingkaran
+        luasLingkaran()
+    }
+    else{
+        document.write('Pilihan anda tidak ada'+'<br>')
+    }
+
+}else if(menu==2){
+    alert ('Anda Telah Memilih Keliling bangun datar')
+    menuKeliling=prompt('Masukan bangun datar yang akan dihitung','1. persegi, 2. persegi panjang, 3. segitiga, 4. Lingkaran')
+    if (menuKeliling==1){
+        //keliling Persegi
+        kelilingPersegi()
+    }
+    else if(menuKeliling==2){
+        //keliling persegi panjang
+        kelilingPersegiPanjang()
+    }
+    else if(menuKeliling==3){
+        //segitiga
+        kelilingSegitiga()
+    }
+    else if(menuKeliling==4){
+        //lingkaran
+        kelilingLingkaran()
+    }
+    else{
+        document.write('Pilihan anda tidak ada'+'<br>')
+    }
+}else{
+    document.write('Menu yang anda pilih tidak ada'+'<br>')
 }
