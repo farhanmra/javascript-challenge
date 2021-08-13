@@ -45,9 +45,18 @@ var dataSiswa = [
 for(i=0;i<dataSiswa.length;i++){
     for(a=0;a<3;a++)
     // tampung=dataSiswa[i][a]
-    document.write(dataSiswa[i][a]+ ' ')
-    // document.write(data[a] +': ')
-    // document.write(tampung)
+    if(a==0){
+        document.write('Nama :'+dataSiswa[i][a]+ ' '+'<br>')
+        
+    }
+    else if(a==1){
+        document.write('Nilai :'+dataSiswa[i][a]+ ' '+'<br>')
+        
+    }
+    else{
+        document.write('Grade :'+dataSiswa[i][a]+ ' '+'<br>')
+        
+    }
     document.write('<br>')
 }
 
